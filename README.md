@@ -36,3 +36,4 @@ For the ETL-Query lab:
 * Containerize the application using Docker so the database and queries can be portable
 
 
+1g
