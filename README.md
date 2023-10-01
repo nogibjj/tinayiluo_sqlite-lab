@@ -19,7 +19,7 @@ The workflow includes running a Makefile to perform tasks such as installation (
 
 ### Dataset Description
 
-The dataset airline-safety.csv originates from the Aviation Safety Network and consolidates safety-related information for 56 airlines in a CSV file. It encompasses data on available seat kilometers flown every week and provides a detailed record of incidents, fatal accidents, and fatalities, each segregated into two time frames: 1985–1999 and 2000–2014.
+The dataset `airline-safety.csv` originates from the Aviation Safety Network and consolidates safety-related information for 56 airlines in a CSV file. It encompasses data on available seat kilometers flown every week and provides a detailed record of incidents, fatal accidents, and fatalities, each segregated into two time frames: 1985–1999 and 2000–2014.
 
 #### [Resources](https://github.com/fivethirtyeight/data/tree/master/airline-safety) 
 
@@ -74,7 +74,7 @@ This code provides a collection of functions to:
 4. Read all records from that table.
 5. Execute any general query on the database.
 
-After performing any of the above operations, the code also logs the executed SQL queries into a markdown file, "query_log.md", to keep a record of all database interactions.
+After performing any of the above operations, the code also logs the executed SQL queries into a markdown file, `query_log.md`, to keep a record of all database interactions.
 
 <img width="829" alt="Screen Shot 2023-10-01 at 12 25 36 AM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/7e9e7bb2-c00d-43f1-96ec-b2911d78deab">
 
@@ -86,7 +86,7 @@ After performing any of the above operations, the code also logs the executed SQ
 
 <img width="630" alt="Screen Shot 2023-10-01 at 12 30 08 AM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/ac474bbf-5a88-4b69-9c83-e857401be2ef">
 
-Step 2: In main.py:
+Step 2: In `main.py`:
 
 Provides a Command Line Interface (CLI) to perform various actions related to Extract, Transform, Load (ETL) and database operations, using functions from mylib.extract, mylib.transform_load, and mylib.query modules. 
 
@@ -101,7 +101,7 @@ Provides a Command Line Interface (CLI) to perform various actions related to Ex
 
 <img width="713" alt="Screen Shot 2023-10-01 at 12 41 41 AM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/f25d2854-ef98-4f8a-b4e8-ad704da42627">
 
-Step 3: In test_main.py:
+Step 3: In `test_main.py`:
 Runs different parts (actions) of the main.py script independently with specific inputs and checks whether they are working as expected, without any errors and, in some cases, with the expected output. If any of these tests fail, it means there might be a bug or an issue in the corresponding part of the main.py script.
 
 <img width="669" alt="Screen Shot 2023-10-01 at 12 45 01 AM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/25a3ba9d-46d1-470b-8d48-ab404ddbb871">
@@ -112,7 +112,7 @@ Runs different parts (actions) of the main.py script independently with specific
 
 <img width="642" alt="Screen Shot 2023-10-01 at 12 46 00 AM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/d55256a9-d05c-4452-9590-e173cdbcd311">
 
-Step 4: In Makefile:
+Step 4: In `Makefile`:
 
 Add generate_and_push, extract, transform_load, query
 
@@ -125,7 +125,7 @@ Add generate_and_push, extract, transform_load, query
 
 <img width="939" alt="Screen Shot 2023-10-01 at 12 51 11 AM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/4076d058-f4e1-44a5-a11a-71e5e3a6c209">
 
-step 6: log of successful database operations
+step 6: [log of successful database operations](./query_log.md)
 
 ### Architectural Diagram
 
