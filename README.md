@@ -1,39 +1,74 @@
-## SQLite Lab
+## Python Script interacting with SQL Database
+[![CI](https://github.com/nogibjj/tinayiluo_sqlite_lab/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/tinayiluo_sqlite_lab/actions/workflows/cicd.yml)
 
-### Lab:
+Week 5 Mini Project
+Requirements
+* Connect to a SQL database
+* Perform CRUD (create, read, update, delete) operations
+* Write at least two different SQL queries
+Grading Criteria
+* Database connection (20 points)
+* CRUD operations (20 points)
+Deliverables
+* Python script
+* Screenshot or log of successful database operations
 
-* Use an AI Assistant, but use a different one then you used from a previous lab (Anthropic's Claud, Bard, Copilot, CodeWhisperer, Colab AI, etc)
+### Goal
+
++ Set up a CodeSpaces environment to automate the interaction between Python Script and SQL Database.
+
++ This environment should facilitate connection to an SQL database, execution of CRUD (Create, Read, Update, Delete) operations, and formulation of at least two distinct SQL queries.
+
+The workflow includes running a Makefile to perform tasks such as installation (`make install`), testing (`make test`), code formatting (`make format`) with Python Black, linting (`make lint`) with Ruff, and an all-inclusive task (`make all`). This automation streamlines the data analysis process and enhances code quality.
+
+### Preperation
+
++ I forked the nogibjj/sqlite-lab.
+
++ I chose the Airline safety dataset `airline-safety.csv` from Github.
+
+### Dataset Description
+
+The dataset airline-safety.csv originates from the Aviation Safety Network and consolidates safety-related information for 56 airlines in a CSV file. It encompasses data on available seat kilometers flown every week and provides a detailed record of incidents, fatal accidents, and fatalities, each segregated into two time frames: 1985–1999 and 2000–2014.
+
+#### [Resources](https://github.com/fivethirtyeight/data/tree/master/airline-safety) 
+
+### Overview
+
+This project creates a Python script that facilitate connection to an SQL database, execution of CRUD (Create, Read, Update, Delete) operations, and formulation of at least two distinct SQL queries. The specific steps involve: 
+
++ In my.lib, add extract.py, query.py and transform_load.py that perform:
+
 * ETL-Query:  [E] Extract a dataset from URL, [T] Transform, [L] Load into SQLite Database and [Q] Query
-For the ETL-Query lab:
+
 * [E] Extract a dataset from a URL like Kaggle or data.gov. JSON or CSV formats tend to work well.
+
 * [T] Transform the data by cleaning, filtering, enriching, etc to get it ready for analysis.
+
 * [L] Load the transformed data into a SQLite database table using Python's sqlite3 module.
-* [Q] Write and execute SQL queries on the SQLite database to analyze and retrieve insights from the data.
 
-#### Tasks:
+* [Q] Write and execute at least 2 different SQL queries on the SQLite database to analyze and retrieve insights from the data.
+      Perform CRUD (create, read, update, delete) operations
 
-* Fork this project and get it to run
-* Make the query more useful and not a giant mess that prints to screen
-* Convert the main.py into a command-line tool that lets you run each step independantly
-* Fork this project and do the same thing for a new dataset you choose
-* Make sure your project passes lint/tests and has a built badge
-* Include an architectural diagram showing how the project works
++ Convert the main.py into a command-line tool that run each step independantly
 
-#### Reflection Questions
++ In test_main.py, test extract, transform, CRUD (Create, Read, Update, Delete), and general query
 
-* What challenges did you face when extracting, transforming, and loading the data? How did you overcome them?
-* What insights or new knowledge did you gain from querying the SQLite database?
-* How can SQLite and SQL help make data analysis more efficient? What are the limitations?
-* What AI assistant did you use and how did it compare to others you've tried? What are its strengths and weaknesses?
-* If you could enhance this lab, what would you add or change? What other data would be interesting to load and query?
++ In make file, add extract, transform_load, and query command
 
-##### Challenge Exercises
++ Include an architectural diagram showing how the project works
 
-* Add more transformations to the data before loading it into SQLite. Ideas: join with another dataset, aggregate by categories, normalize columns.
-* Write a query to find correlated fields in the data. Print the query results nicely formatted.
-* Create a second table in the SQLite database and write a join query with the two tables.
-* Build a simple Flask web app that runs queries on demand and displays results.
-* Containerize the application using Docker so the database and queries can be portable
+### Description
 
+Step 1: In my.lib: 
 
-1g
++ create extract.py
+
++ create quetry.py
+
++ create transform_load.py
+
+### Make Format, Test, Lint, All Approval Image
+<img width="851" alt="Screen Shot 2023-09-30 at 7 32 58 PM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/f0907017-4be5-49de-9e97-739047599c82">
+<img width="1151" alt="Screen Shot 2023-09-30 at 7 36 13 PM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/3df48fef-a3a2-4f87-8c78-3517c6b4dbe3">
+<img width="1136" alt="Screen Shot 2023-09-30 at 7 36 57 PM" src="https://github.com/nogibjj/tinayiluo_sqlite_lab/assets/143360909/c6174dd0-4f34-47a4-b23e-815c4eab5be7">
